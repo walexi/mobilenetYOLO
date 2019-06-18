@@ -21,11 +21,11 @@ if hasattr(tf,'enable_eager_execution'):
     tf.enable_eager_execution()
 
 parser = argparse.ArgumentParser(description='Train on your own data')
-parser.add_argument('--train_path', help='Path to train dataset.', default='/content/working_dir/mobilenetv2-yolov3/train')
-parser.add_argument('--val_path', help='Path to validation dataset', default='/content/working_dir/mobilenetv2-yolov3/test')
-parser.add_argument('--anchors_path', help='Path to anchor file', default='/content/working_dir/mobilenetv2-yolov3/model_data/yolo_anchors.txt')
-parser.add_argument('--classes_path', help='Path to class file', default='/content/working_dir/mobilenetv2-yolov3/model_data/voc_classes.txt')
-parser.add_argument('--model_path', help='Path to pretrained weights, filename ending in .h5', default='/content/working_dir/mobilenetv2-yolov3/download/trained_weights_final6.h5')
+parser.add_argument('--train_path', help='Path to train dataset.', default='/content/working_dir/mobilenetYOLO/train')
+parser.add_argument('--val_path', help='Path to validation dataset', default='/content/working_dir/mobilenetYOLO/test')
+parser.add_argument('--anchors_path', help='Path to anchor file', default='/content/working_dir/mobilenetYOLO/model_data/yolo_anchors.txt')
+parser.add_argument('--classes_path', help='Path to class file', default='/content/working_dir/mobilenetYOLO/model_data/voc_classes.txt')
+parser.add_argument('--model_path', help='Path to pretrained weights, filename ending in .h5', default='/content/working_dir/mobilenetYOLO/download/trained_weights_final6.h5')
 
 
 def _main(args):
@@ -36,7 +36,7 @@ def _main(args):
 
     opt=None
     backbone = BACKBONE.MOBILENETV2
-    log_dir = '/content/working_dir/mobilenetv2-yolov3/logs/'+str(backbone).split('.')[1].lower()+str(datetime.date.today())
+    log_dir = '/content/working_dir/mobilenetYOLO/logs/'+str(backbone).split('.')[1].lower()+str(datetime.date.today())
     batch_size = 4
     train_dataset_path = args.train_path
     val_dataset_path = args.val_path
