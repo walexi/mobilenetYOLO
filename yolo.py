@@ -27,27 +27,27 @@ class YOLO(object):
         "model_config":{
             BACKBONE.MOBILENETV2:{
                 "input_size":(224,224),
-                "model_path": '../download/mobilenetv2_trained_weights_stage_12.h5',
-                "anchors_path":'model_data/yolo_anchors.txt',
-                "classes_path":'model_data/voc_classes.txt'
+                "model_path": '/content/working_dir/model_data/mobilenetv2_trained_weights_stage_12.h5',
+                "anchors_path":'/content/working_dir/model_data/yolo_anchors.txt',
+                "classes_path":'/content/working_dir/model_data/voc_classes.txt'
             },
             BACKBONE.DARKNET53:{
                 "input_size":(416,416),
-                "model_path": '../download/trained_weights_final6.h5',
-                "anchors_path": 'model_data/yolo_anchors.txt',
-                "classes_path": 'model_data/voc_classes.txt'
+                "model_path": '/content/working_dir/model_data/trained_weights_final6.h5',
+                "anchors_path": '/content/working_dir/model_data/yolo_anchors.txt',
+                "classes_path": '/content/working_dir/model_data/voc_classes.txt'
             },
             BACKBONE.INCEPTION_RESNET2: {
                 "input_size": (608, 608),
-                "model_path": '../download/trained_weights_final6.h5',
-                "anchors_path": 'model_data/yolo_anchors.txt',
-                "classes_path": 'model_data/voc_classes.txt'
+                "model_path": '/content/working_dir/model_data/trained_weights_final6.h5',
+                "anchors_path": '/content/working_dir/model_data/yolo_anchors.txt',
+                "classes_path": '/content/working_dir/model_data/voc_classes.txt'
             },
             BACKBONE.DENSENET: {
                 "input_size": (416, 416),
-                "model_path": '../download/densenet_trained_weights_stage_1.h5',
-                "anchors_path": 'model_data/yolo_anchors.txt',
-                "classes_path": 'model_data/voc_classes.txt'
+                "model_path": '/content/working_dir/model_data/densenet_trained_weights_stage_1.h5',
+                "anchors_path": '/content/working_dir/model_data/yolo_anchors.txt',
+                "classes_path": '/content/working_dir/model_data/voc_classes.txt'
             }
         },
         "score": 0.1,
